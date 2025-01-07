@@ -4,17 +4,25 @@
     <string name="zapatillas_title">Zapatillas El Ganso Verdes Talla 43 Nuevas!!</string>
     <string name="protection_text">68,95 € Protección al comprador incluidas</string>
     <string name="description_text">Zapatillas casual de la marca El Ganso en color verde disponibles en la talla 43.Se</string>
-    <string name="armario_title">Distintivo Armario estrella</string>
+    <string name="armario_title"><b>Distintivo Armario estrella</b></string>
     <string name="armario_text">Concedido a vendedores que suben artículos con frecuencia.</string>
-    <string name="tasa_title">Distintivo Armario estrella</string>
-    <string name="tasa_text">Nuestra protección al comprador implica una tasa que se añade a las compras realizadas a través del botón "Comprar".Esta protección incluye la política de reembolso.</string>
+    <string name="tasa_title"><b>Tasa de protección al comprador</b></string>
+    <string name="tasa_text">Nuestra <u>protección al comprador</u> implica una tasa que se añade a las compras realizadas a través del botón "Comprar".Esta protección incluye la <u>política de reembolso</u>.</string>
+
     <string name="report">Denunciar</string>
     <string name="share">Compartir</string>
     <string name="favorite_button">Botón de favorito: Añade el artículo a tus favoritos</string>
-    <string name="nº_favorites">0 likes</string>
+    <string name="nº_favorites">18 likes</string>
     <string name="username">pacocuevas83</string>
     <string name="nº_users_rating">(190)</string>
     <string name="button_adds">Anuncios frecuentes</string>
     <string name="button_send">Enviar …</string>
-
+    <string name="do_offer">Hacer una oferta</string>
+    <string name="buy_offer">Comprar</string>
+    <string name="hola">43 Nuevo con etiquetas <u>EL GANSO</u></string>
+    <string name="price_1">65,00 €</string>
+    <string name="description_title">Descripción</string>
+    <string name="more_information"><u>Más</u></string>
+    <string name="text_send"><b>Envío</b></string>
+    <string name="text_price_total">Desde 0,00 €</string>
 </resources>

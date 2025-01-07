@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <!-- margin -->
+    <dimen name="margin_xs">5dp</dimen>
     <dimen name="margin_s">10dp</dimen>
     <dimen name="margin_m">18dp</dimen>
-    <dimen name="margin_x">24dp</dimen>
+    <dimen name="margin_l">24dp</dimen>
 
     <!-- text size -->
     <dimen name="size_s">10sp</dimen>
     <dimen name="size_m">18sp</dimen>
-    <dimen name="size_x">24sp</dimen>
+    <dimen name="size_xm">20sp</dimen>
+    <dimen name="size_l">24sp</dimen>
 
 </resources>
