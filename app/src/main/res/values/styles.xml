@@ -1,7 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <style name="Button" parent="Widget.AppCompat.Button">
-        <item name="cornerRadius">0dp</item>
+    <style name="textColorBlue" parent="Widget.AppCompat.TextView">
+        <item name="android:textColor">#51949F</item>
+    </style>
 
+    <style name="OutlinedButton" parent="Widget.MaterialComponents.Button.OutlinedButton">
+        <item name="cornerRadius">0dp</item>
+    </style>
+
+    <style name="FilledButton" parent="Widget.MaterialComponents.Button">
+        <item name="cornerRadius">0dp</item>
+    </style>
+
+    <!-- style text in app -->
+    <style name="generalText" parent="TextAppearance.MaterialComponents.Body1">
+        <item name="android:fontFamily">@font/actor</item>
     </style>
 </resources>
