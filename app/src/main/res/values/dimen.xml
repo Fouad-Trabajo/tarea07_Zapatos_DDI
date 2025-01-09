@@ -7,8 +7,8 @@
     <dimen name="margin_l">24dp</dimen>
 
     <!-- text size -->
-    <dimen name="size_s">10sp</dimen>
-    <dimen name="size_xs">14sp</dimen>
+    <dimen name="size_xs">10sp</dimen>
+    <dimen name="size_s">14sp</dimen>
     <dimen name="size_m">18sp</dimen>
     <dimen name="size_xm">20sp</dimen>
     <dimen name="size_l">24sp</dimen>

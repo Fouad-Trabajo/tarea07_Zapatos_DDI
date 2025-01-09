@@ -38,7 +38,7 @@
         android:layout_margin="@dimen/margin_xs"
         android:clipToPadding="true"
         app:layout_behavior="@string/appbar_scrolling_view_behavior"
-        android:paddingBottom="60dp">
+        android:paddingBottom="70dp">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/linear_scroll"
@@ -140,11 +140,10 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/margin_m"
+                style="@style/Widget.AppCompat.RatingBar.Small"
                 android:rating="5"
-                android:scaleX="0.5"
-                android:scaleY="0.5"
                 android:stepSize="0.5"
-                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/img_profile"
                 app:layout_constraintTop_toBottomOf="@+id/text_username" />
 
             <TextView
@@ -152,9 +151,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/nº_users_rating"
-                app:layout_constraintCircle="@+id/rating_bar"
-                app:layout_constraintCircleAngle="80"
-                app:layout_constraintCircleRadius="75dp"
+                android:textSize="@dimen/size_s"
                 app:layout_constraintStart_toEndOf="@+id/rating_bar"
                 app:layout_constraintTop_toBottomOf="@+id/text_username" />
 
@@ -171,13 +168,10 @@
             <Button
                 android:id="@+id/button_adds"
                 android:layout_width="wrap_content"
-                android:layout_height="32dp"
+                android:layout_height="wrap_content"
                 android:text="@string/button_adds"
-                android:textSize="@dimen/size_s"
+                android:textSize="@dimen/size_xs"
                 app:icon="@drawable/ic_checkroom"
-                app:layout_constraintCircle="@+id/rating_bar"
-                app:layout_constraintCircleAngle="160"
-                app:layout_constraintCircleRadius="30dp"
                 app:layout_constraintStart_toEndOf="@+id/img_profile"
                 app:layout_constraintTop_toBottomOf="@id/rating_bar" />
 
