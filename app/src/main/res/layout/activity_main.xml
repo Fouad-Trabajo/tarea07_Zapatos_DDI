@@ -1,4 +1,4 @@
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
@@ -6,44 +6,39 @@
     android:layout_height="match_parent"
     tools:context="com.fouadaha.tarea07zapatos.MainActivity">
 
-    <androidx.coordinatorlayout.widget.CoordinatorLayout
-        android:id="@+id/coordinator_layout"
+
+    <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        android:layout_height="wrap_content">
 
-
-        <com.google.android.material.appbar.AppBarLayout
+        <com.google.android.material.appbar.CollapsingToolbarLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
+            android:layout_height="80dp"
+            app:collapsedTitleTextColor="#000000"
+            app:expandedTitleTextColor="@android:color/transparent"
+            app:contentScrim="@android:color/transparent"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed">
 
             <com.google.android.material.appbar.MaterialToolbar
                 android:id="@+id/topAppBar"
                 android:layout_width="match_parent"
                 android:layout_height="?attr/actionBarSize"
-                android:background="@android:color/transparent"
-                android:minHeight="?attr/actionBarSize"
+                app:layout_collapseMode="pin"
                 app:menu="@menu/top_app_bar"
                 app:navigationIcon="@drawable/ic_back_arrow"
                 app:title="@string/zapatillas_title" />
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+    </com.google.android.material.appbar.AppBarLayout>
 
-        </com.google.android.material.appbar.AppBarLayout>
 
-    </androidx.coordinatorlayout.widget.CoordinatorLayout>
-
-    <ScrollView
+    <androidx.core.widget.NestedScrollView
         android:id="@+id/scroll_view"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
+        android:layout_height="match_parent"
         android:layout_margin="@dimen/margin_xs"
-        app:layout_constraintBottom_toTopOf="@+id/offer_button"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        android:clipToPadding="true"
         app:layout_behavior="@string/appbar_scrolling_view_behavior"
-        app:layout_constraintTop_toBottomOf="@+id/coordinator_layout">
+        android:paddingBottom="60dp">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/linear_scroll"
@@ -144,11 +139,11 @@
                 android:id="@+id/rating_bar"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_m"
                 android:rating="5"
                 android:scaleX="0.5"
                 android:scaleY="0.5"
                 android:stepSize="0.5"
-                android:layout_marginStart="@dimen/margin_m"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/text_username" />
 
@@ -158,8 +153,8 @@
                 android:layout_height="wrap_content"
                 android:text="@string/nº_users_rating"
                 app:layout_constraintCircle="@+id/rating_bar"
-                app:layout_constraintCircleRadius="75dp"
                 app:layout_constraintCircleAngle="80"
+                app:layout_constraintCircleRadius="75dp"
                 app:layout_constraintStart_toEndOf="@+id/rating_bar"
                 app:layout_constraintTop_toBottomOf="@+id/text_username" />
 
@@ -179,10 +174,10 @@
                 android:layout_height="32dp"
                 android:text="@string/button_adds"
                 android:textSize="@dimen/size_s"
+                app:icon="@drawable/ic_checkroom"
                 app:layout_constraintCircle="@+id/rating_bar"
                 app:layout_constraintCircleAngle="160"
                 app:layout_constraintCircleRadius="30dp"
-                app:icon="@drawable/ic_checkroom"
                 app:layout_constraintStart_toEndOf="@+id/img_profile"
                 app:layout_constraintTop_toBottomOf="@id/rating_bar" />
 
@@ -190,8 +185,8 @@
             <com.google.android.material.divider.MaterialDivider
                 android:id="@+id/divider_1"
                 android:layout_width="match_parent"
-                android:layout_marginTop="@dimen/margin_s"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_s"
                 app:layout_constraintTop_toBottomOf="@+id/button_adds" />
 
 
@@ -199,9 +194,9 @@
                 android:id="@+id/text_title"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_m"
                 android:text="@string/zapatillas_title"
                 android:textSize="@dimen/size_l"
-                android:layout_marginTop="@dimen/margin_m"
                 android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/button_adds" />
@@ -225,9 +220,9 @@
 
             <TextView
                 android:id="@+id/text_protection"
+                style="@style/textColorBlue"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                style="@style/textColorBlue"
                 android:text="@string/protection_text"
                 app:drawableEndCompat="@drawable/ic_verified_user"
                 app:layout_constraintStart_toStartOf="parent"
@@ -237,8 +232,8 @@
                 android:id="@+id/divider_2"
                 android:layout_width="match_parent"
                 android:layout_height="30dp"
-                app:dividerColor="#E2DCDC"
                 android:layout_marginTop="@dimen/margin_m"
+                app:dividerColor="#E2DCDC"
                 app:layout_constraintTop_toBottomOf="@+id/text_protection" />
 
             <TextView
@@ -263,10 +258,10 @@
             <!-- Aquí he preferido utiliziar un textView en vez de un text button -->
             <TextView
                 android:id="@+id/text_more_information"
+                style="@style/textColorBlue"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/more_information"
-                style="@style/textColorBlue"
                 android:textSize="@dimen/size_xm"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/text_description" />
@@ -275,8 +270,8 @@
                 android:id="@+id/divider_3"
                 android:layout_width="match_parent"
                 android:layout_height="30dp"
-                app:dividerColor="#E2DCDC"
                 android:layout_marginTop="@dimen/margin_m"
+                app:dividerColor="#E2DCDC"
                 app:layout_constraintTop_toBottomOf="@+id/text_more_information" />
 
             <TextView
@@ -284,9 +279,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/margin_m"
+                android:layout_marginTop="@dimen/margin_m"
                 android:text="@string/armario_title"
                 android:textSize="@dimen/size_m"
-                android:layout_marginTop="@dimen/margin_m"
                 app:drawableStartCompat="@drawable/ic_checkroom"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/divider_3" />
@@ -324,16 +319,16 @@
                 android:id="@+id/divider_4"
                 android:layout_width="match_parent"
                 android:layout_height="30dp"
-                app:dividerColor="#E2DCDC"
                 android:layout_marginTop="@dimen/margin_m"
+                app:dividerColor="#E2DCDC"
                 app:layout_constraintTop_toBottomOf="@+id/text_tasa_description" />
 
             <TextView
                 android:id="@+id/text_send"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/text_send"
                 android:layout_marginTop="@dimen/margin_s"
+                android:text="@string/text_send"
                 android:textSize="@dimen/size_xm"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/divider_4" />
@@ -343,19 +338,20 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/text_price_total"
-                android:textSize="@dimen/size_m"
                 android:textColor="#AAA0A0"
+                android:textSize="@dimen/size_m"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="@+id/text_send" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
-    </ScrollView>
+    </androidx.core.widget.NestedScrollView>
 
     <Button
         android:id="@+id/offer_button"
         style="@style/OutlinedButton"
         android:layout_width="180dp"
         android:layout_height="wrap_content"
+        android:layout_gravity="bottom|start"
         android:layout_margin="@dimen/margin_s"
         android:text="@string/do_offer"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -363,12 +359,13 @@
 
     <Button
         android:id="@+id/buy_button"
-        android:layout_width="180dp"
         style="@style/FilledButton"
+        android:layout_width="180dp"
         android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
         android:layout_margin="@dimen/margin_s"
         android:text="@string/buy_offer"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

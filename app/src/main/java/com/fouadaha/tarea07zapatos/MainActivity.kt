@@ -41,7 +41,6 @@ class MainActivity : AppCompatActivity() {
                     checkBox.text = "${likes - 1} likes"
 
                 }
-
             }
         }
     }
